@@ -1,5 +1,5 @@
-@import "tailwindcss";
-@import "tw-animate-css";
+@import 'tailwindcss';
+@import 'tw-animate-css';
 
 @custom-variant dark (&:is(.dark *));
 
@@ -113,10 +113,43 @@
 }
 
 @layer base {
+  /* TW css has 3 layers: base, components, utilities */
+  /* base layer allows targeting any HTML tags */
+  /* components layer creates utility classes */
+  /* utility is like adding a .btn class for a button */
   * {
     @apply border-border outline-ring/50;
   }
   body {
     @apply bg-background text-foreground;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    /* font-weight: bold; */
+    @apply font-bold;
+    /* @apply applies all the styles associated w a particular class name from TW css */
+  }
+  h1 {
+    font-size: 2.5rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
+  h4 {
+    font-size: 1.5rem;
+  }
+  h5 {
+    font-size: 1.25rem;
+  }
+  h6 {
+    font-size: 1rem;
   }
 }
