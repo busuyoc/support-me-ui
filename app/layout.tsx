@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
+import {cn} from "../lib/utils.ts"
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -25,8 +26,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${poppins.className} antialiased`}
-      >
+        className={cn(poppins.className, "dark")}
+      >  {/* {`${poppins.className} antialiased`} comments need to be in JSv
+            - the above was before
+            - now using the cn() fn to concat the css class names
+            - "dark" comes from tailwind*/
+            }
         {children}
       </body>
     </html>
