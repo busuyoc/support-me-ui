@@ -33,7 +33,7 @@ export default function LandingPage() {
         {/* all the styling will be applied to the Link tag */}
         <small>or</small>
         <Button asChild variant="outline">
-          <Link href="/sign-up">Sign up</Link>
+          <Link href="./sign-up">Sign up</Link>
         </Button>
         {/* variant prop comes from shadcn */}
       </div>
